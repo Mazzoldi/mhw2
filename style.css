@@ -1,0 +1,80 @@
+.choice-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+.choice-grid div{
+    align-items: flex-start;
+    background-color: #f4f4f4;
+    border: 1px solid #dcdcdc;
+    display: flex;
+    flex-direction: column;
+    /*height: calc(32.5% + 3px); /*-20px di margine - 2px di bordo + 5 di margin-top della checkbox + 20px di altezza della checkbox*/
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    width: calc(32.5% - 22px); /*-20px di margine - 2px di bordo*/
+}
+.choice-grid img{
+    aspect-ratio: 1/1;
+    width: 100%;
+    /*DIMENSIONE QUADRATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA*/
+}
+.choice-grid div.chosen{
+    background-color: #cfe3ff;
+}
+.choice-grid div.unchosen{
+    opacity: 0.6;
+}
+.hidden{
+    display: none;
+}
+.question-name{
+    margin: 10px 0;
+}
+#refresh{
+    background-color: #cecece;
+    border: none;
+    font-size: 20px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+#refresh:hover{
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+#result{
+    margin: 30px 0 20px 0; /*30px perché ci sono i 10px di margin-bottom delle risposte sopra*/
+}
+#result div{
+    padding: 20px;
+}
+#result div h1{
+    margin: 0;
+}
+#result div p{
+    margin: 18px 0;
+}
+@media(max-width: 700px){
+    article{
+        width: 95%;
+    }
+    article h1{
+        font-size: 40px; /*Altrimenti andava a capo*/
+    }
+    header div{
+        display: none;
+    }
+    .question-name h1{
+        font-size: 50px;
+    }
+}
+@media(max-width: 500px){
+    .choice-grid div{
+        width: calc(49% - 22px);
+    }
+}
