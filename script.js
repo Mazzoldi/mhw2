@@ -57,7 +57,6 @@ function refresh(event){
     window.scrollTo(0,0);
 }
 let choices={};
-//const boxs=document.querySelectorAll('.choice-grid div');
 const allBoxes=document.querySelectorAll('.choice-grid div');
 for(const box of allBoxes){
     box.addEventListener('click', choice);
