@@ -22,8 +22,7 @@ function choice(event){
     }
 }
 function isQuizComplete(){
-    const chosenBoxes=document.querySelectorAll('.choice-grid div.chosen');
-    return chosenBoxes.length===3;
+    return Object.keys(choices).length===3;
 }
 function quizCompleted(){
     for(const box of allBoxes){
@@ -47,6 +46,7 @@ function showResult(choice){
 }
 function refresh(event){
     for(const box of allBoxes){
+        choices={};
         box.classList.remove('chosen');
         box.classList.remove('unchosen');
         const checkbox=box.querySelector('.checkbox');
